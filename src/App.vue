@@ -11,7 +11,13 @@
       :state="item.goods_state"
       :count="item.goods_count"
       @state-change="getNewState"
-    ></Goods>
+    >
+      <Counter
+      :num="item.goods_count"
+      @numChange="getNewNum(item, $event)"
+      >
+      </Counter>
+    </Goods>
     <Footer
     :isAll="isAllCheck"
     :sum="amount"
@@ -26,7 +32,7 @@ import Counter from '@/components/Counter.vue'
 import Footer from '@/components/Footer.vue'
 import Header from '@/components/Header.vue'
 import Goods from '@/components/Goods.vue'
-import bus from '@/components/eventBus.js'
+// import bus from '@/components/eventBus.js'
 import axios from 'axios'
 
 export default {
@@ -35,7 +41,7 @@ export default {
     Header,
     Goods,
     Counter,
-    Footer
+    Footer,
   },
   data() {
     return {
@@ -44,11 +50,11 @@ export default {
   },
   created() {
     this.initCardList()
-    bus.$on('share', (val) => {
-      this.list.some((item) => {
-        if (item.id === val.id && val.count > 0) item.goods_count = val.count
-      })
-    })
+    // bus.$on('share', (val) => {
+    //   this.list.some((item) => {
+    //     if (item.id === val.id && val.count > 0) item.goods_count = val.count
+    //   })
+    // })
   },
   methods: {
     async initCardList() {
@@ -67,6 +73,10 @@ export default {
     },
     getAllChecked(e) {
       this.list.forEach((item) => (item.goods_state = e))
+    },
+    getNewNum(item, e){
+      if ( e > 0) item.goods_count = e
+
     }
   },
   computed: {

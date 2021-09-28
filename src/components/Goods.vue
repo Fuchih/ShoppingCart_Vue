@@ -1,6 +1,6 @@
 <template>
   <div class="container row mx-auto goods">
-    <div class="row  mb-4">
+    <div class="row  mb-5">
       <input type="checkbox" class="form-check-input" :id="id" :checked="state" @change="stateChange" />
       <label :for="id" class="good-pic">
         <img :src="pic" class="img-fluid" />
@@ -8,7 +8,8 @@
       <div class="col position-relative">
         <h1 class="title">{{ title }}</h1>
         <div class="text-danger">${{ price }}</div>
-        <Counter :num="count" :id="id"></Counter>
+        <slot></slot>
+        <!-- <Counter :num="count" :id="id"></Counter> -->
       </div>
     </div>
     <hr />

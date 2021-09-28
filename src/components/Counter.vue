@@ -9,12 +9,11 @@
 </template>
 
 <script>
-import bus from '@/components/eventBus.js'
+// import bus from '@/components/eventBus.js'
 
 export default {
   props: {
     id: {
-      required: true,
       type: Number
     },
     num: {
@@ -24,12 +23,14 @@ export default {
   },
   methods: {
     sub() {
-       const obj = { id: this.id, count: this.num -1 }
-      bus.$emit('share', obj)
+      this.$emit('numChange', this.num - 1)
+      //  const obj = { id: this.id, count: this.num -1 }
+      // bus.$emit('share', obj)
     },
     add() {
-      const obj = { id: this.id, count: this.num + 1 }
-      bus.$emit('share', obj)
+      this.$emit('numChange', this.num + 1)
+      // const obj = { id: this.id, count: this.num + 1 }
+      // bus.$emit('share', obj)
     }
   }
 }
@@ -38,6 +39,6 @@ export default {
 <style lang="scss" scoped>
 .change-num {
   bottom: 20px;
-  right: -20px;
+  right: -35px;
 }
 </style>

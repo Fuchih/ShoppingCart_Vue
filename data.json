@@ -1,0 +1,86 @@
+{
+  "status": 200,
+  "message": "Connection successful！",
+  "list": [
+      {
+          "id": 1,
+          "goods_name": "Bundle",
+          "goods_img": "./data/bundle.jpg",
+          "goods_price": 16,
+          "goods_count": 1,
+          "goods_state": true
+      },
+      {
+          "id": 2,
+          "goods_name": "Burger",
+          "goods_img": "./data/burger1.jpg",
+          "goods_price": 12,
+          "goods_count": 1,
+          "goods_state": true
+      },
+      {
+          "id": 3,
+          "goods_name": "Burger",
+          "goods_img": "./data/burger2.jpg",
+          "goods_price": 8,
+          "goods_count": 1,
+          "goods_state": false
+      },
+      {
+          "id": 4,
+          "goods_name": "Burger",
+          "goods_img": "./data/burger3.jpg",
+          "goods_price": 9.9,
+          "goods_count": 1,
+          "goods_state": false
+      },
+      {
+          "id": 5,
+          "goods_name": "Sandwich",
+          "goods_img": "./data/sandwich1.jpg",
+          "goods_price": 15,
+          "goods_count": 1,
+          "goods_state": true
+      },
+      {
+          "id": 6,
+          "goods_name": "Sandwich",
+          "goods_img": "./data/sandwich2.jpg",
+          "goods_price": 14.8,
+          "goods_count": 1,
+          "goods_state": true
+      },
+      {
+          "id": 7,
+          "goods_name": "Sandwich",
+          "goods_img": "./data/sandwich3.jpg",
+          "goods_price": 21,
+          "goods_count": 2,
+          "goods_state": true
+      },
+      {
+          "id": 8,
+          "goods_name": "Sandwich",
+          "goods_img": "./data/sandwich4.jpg",
+          "goods_price": 18.8,
+          "goods_count": 1,
+          "goods_state": true
+      },
+      {
+          "id": 9,
+          "goods_name": "Sandwich",
+          "goods_img": "./data/sandwich5.jpg",
+          "goods_price": 9.9,
+          "goods_count": 1,
+          "goods_state": false
+      },
+      {
+          "id": 10,
+          "goods_name": "Sandwich",
+          "goods_img": "./data/sandwich6.jpg",
+          "goods_price": 8.9,
+          "goods_count": 1,
+          "goods_state": false
+      }
+  ]
+}
